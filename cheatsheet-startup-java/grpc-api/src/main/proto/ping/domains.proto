@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.example.ping.domains";
+package ping.domains;
+/**
+  返回的状态码
+ */
+enum ResponseCode {
+  SUCCESS = 0;  // 成功
+  ERROR = 1;    // 失败ss
+}
+message HelloVo {
+  // 用户的姓名
+  string name = 1;
+  // 用户的性别
+  uint64 sex = 2;
+}

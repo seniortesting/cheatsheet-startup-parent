@@ -1,0 +1,42 @@
+{
+  "name": "NuxtElectron",
+  "version": "1.0.0",
+  "description": "A example nuxt electron desktop app",
+  "author": "Heap Stack",
+  "private": true,
+  "main": "./dist/main/index.js",
+  "scripts": {
+    "dev": "cross-env-shell NODE_ENV=development node .electron-nuxt/index.js",
+    "build": "cross-env-shell NODE_ENV=production node .electron-nuxt/index.js",
+    "lint": "node_modules/.bin/eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter ./src",
+    "lint:fix": "npm run lint -- --fix",
+    "postinstall": "electron-builder install-app-deps & npm run lint:fix"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@xpda-dev/core": "^0.1.5",
+    "@xpda-dev/electron-launcher": "^0.1.1",
+    "@xpda-dev/electron-builder": "^0.1.1",
+    "@xpda-dev/webpack-step": "^0.1.2",
+    "browser-env": "3.2.6",
+    "cross-env": "6.0.0",
+    "electron": "5.0.10",
+    "electron-builder": "21.2.0",
+    "electron-debug": "3.0.1",
+    "electron-updater": "^4.1.2",
+    "eslint": "5.16.0",
+    "eslint-plugin-nuxt": ">=0.4.2",
+    "babel-eslint": "10.0.3",
+    "eslint-friendly-formatter": "4.0.1",
+    "eslint-loader": "3.0.0",
+    "@nuxtjs/eslint-config": "1.1.2",
+    "@nuxtjs/eslint-module": "^1.0.0",
+    "nuxt": "2.8.1",
+    "vue-devtools": "5.1.3",
+    "webpack": "4.40.2",
+    "webpack-node-externals": "1.7.2",
+    "@nuxtjs/axios": "^5.6.0",
+    "localforage-nuxt": "1.0.5",
+    "ant-design-vue": "^1.1.10"
+  }
+}

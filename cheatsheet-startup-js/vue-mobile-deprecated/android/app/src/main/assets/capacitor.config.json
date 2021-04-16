@@ -1,0 +1,17 @@
+{
+  "appId": "com.github.app",
+  "appName": "vue-mobile",
+  "bundledWebRuntime": true,
+  "webDir": "dist",
+  "npmClient": "yarn",
+  "windowsAndroidStudioPath": "E:\\Program Files\\JetBrains\\IntelliJ IDEA 2019.1\\bin\\idea64.exe",
+  "android": {
+    "allowMixedContent": true,
+    "captureInput": true,
+    "webContentsDebuggingEnabled": true
+  },
+  "ios": {
+    "cordovaSwiftVersion": "3.2",
+    "minVersion": "10.3"
+  }
+}

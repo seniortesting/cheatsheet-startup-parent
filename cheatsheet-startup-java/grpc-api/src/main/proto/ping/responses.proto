@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.example.ping.responses";
+package ping.responses;
+
+import 'ping/domains.proto';
+//请求参数 基于序号的协议字段映射，所以字段可以乱序，可缺段
+message HelloResponse {
+  // 返回的状态码
+  ping.domains.ResponseCode code = 1;
+  message Result {
+    // 一个修饰符,返回字段可以重复任意多次（包括0次） 可以认为就是一个数组(切片)
+    repeated ping.domains.HelloVo records = 1;
+    // 返回页码,proto3的json-mapping中规定了int64/uint64/fixed64类型映射的json类型为string。
+    // 如图：（PB文档地址：https://developers.google.com/protocol-buffers/docs/proto3#json）
+    //  大意就是：JS使用了52bit去实现IEEE754的双精度数，也就是说js在不丢失信息的情况下最大能表示的数是 2^52 。
+    //  64位的数在JS中直接使用是会有问题了。PB为了客户端能正常处理数据而把64位数值直接转换为了string类型。
+    uint32 page_num = 2;
+    // 返回的总数据条数
+    uint32 total = 3;
+  }
+  // 返回的数据
+  Result data = 2;
+  // 返回的消息
+  string message = 3;
+  // 返回的时间戳
+  string timestamp = 4;
+}

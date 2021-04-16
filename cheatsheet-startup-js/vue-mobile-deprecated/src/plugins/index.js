@@ -1,0 +1,7 @@
+import './iconfont'
+import './animate.css'
+import './axios'
+import './vee-validate'
+import './vue-clipboard2'
+import './ionic'
+import './vant'

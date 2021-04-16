@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+// java_package是定义编译生成的java文件所在的目录
+option java_package = "com.example.ping.services";
+package ping.services;
+
+import "ping/requests.proto";
+import 'ping/responses.proto';
+
+/**
+  * 测试ping接口
+ */
+service HelloService {
+  /// 用于测试服务接口
+  rpc sayHello (ping.requests.HelloRequest)  returns (ping.responses.HelloResponse) {}
+}

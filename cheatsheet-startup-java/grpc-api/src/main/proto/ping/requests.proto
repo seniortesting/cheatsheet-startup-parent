@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.example.ping.requests";
+package ping.requests;
+
+/**
+ * 请求报文
+ */
+message HelloRequest {
+  // 姓名
+  string name = 1;
+  // 年龄,unsigned integers, 在64位机器上，坚持使用与当前架构上的单词大小相同的数据类型（ 例如32位架构上的32位）通常效率更高
+  uint64 age = 2;
+}
