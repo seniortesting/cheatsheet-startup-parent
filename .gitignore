@@ -270,3 +270,6 @@ upload
 
 # vuepress file
 .temp
+
+# mocha files
+mochawesome-report
