@@ -1,7 +1,7 @@
 module.exports = {
     spec: 'test/**/*.spec.js',
     growl: true,
-    ui: 'bdd',
+    ui: 'tdd',
     parallel: false,
     require: ['global.js']
 }

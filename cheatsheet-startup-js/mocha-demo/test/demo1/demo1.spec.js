@@ -5,14 +5,14 @@ describe('test ratingService', function () {
         console.log('ratingService before hook')
     })
     beforeEach('ratingService beforeEach hook', function () {
-        console.log('ratingService beforeEach hook')
+        console.debug('ratingService beforeEach hook')
     })
     after('ratingService after hook', () => {
         console.log('ratingService after hook')
     })
 
-    describe('test queryRatingConfig method', function () {
-        it('test suite 2, 1+1=2', () => {
+    it('test queryRatingConfig method', function () {
+        it('test suite 2, 1+1=2', function () {
             console.log('test suite 2, 1+1')
         })
     })
@@ -21,10 +21,7 @@ describe('test ratingService', function () {
         const result = sum(1, 1)
         expect(result).to.be.equal(2, 'sum verification')
     })
-
-    it.skip('test skip this method', function () {
+    it('test skip this method', function () {
         assert.equal(sum(2, 2), 4, 'assert validation')
     })
-
-
 })
