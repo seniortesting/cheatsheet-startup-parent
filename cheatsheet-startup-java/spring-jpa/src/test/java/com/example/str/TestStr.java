@@ -1,12 +1,11 @@
 package com.example.str;
 
-import java.util.Objects;
-import java.util.Optional;
-import java.util.concurrent.TimeUnit;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import com.google.common.base.Stopwatch;
-import lombok.extern.slf4j.Slf4j;
+
+import java.util.Objects;
+import java.util.Optional;
 
 
 @Slf4j
@@ -15,7 +14,7 @@ public class TestStr {
     @Test
     public void testNullString() {
         String str = "";
-        final Stopwatch stopwatch = Stopwatch.createStarted();
+
         final boolean present = Optional.ofNullable(str).isPresent();
         Assertions.assertTrue(present);
 
@@ -26,7 +25,6 @@ public class TestStr {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        LOGGER.info("time cost: {}", stopwatch.elapsed(TimeUnit.MILLISECONDS));
 
     }
 }
