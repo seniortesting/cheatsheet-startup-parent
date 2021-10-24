@@ -10,4 +10,4 @@ https://www.jianshu.com/p/d32c61b1bd3f
 1. class成员变量自动注解对应类实例化（@inject）
 2. 学习如何接口多实现类指定类实例化（@Named("serviceName")),
 3. class构造函数的自动注解实例类同1
-4. 
+4. 采用@provides方式可以省略掉在module中的configure的bind配置
