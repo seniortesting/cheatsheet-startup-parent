@@ -11,7 +11,7 @@
     </parent>
 
     <groupId>com.example</groupId>
-    <artifactId>examples-startup-java-pom</artifactId>
+    <artifactId>cheatsheet-startup-java-pom</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
 
@@ -21,7 +21,7 @@
     <properties>
         <revision>1.0.3</revision>
         <!-- for maven compiler plugin -->
-        <java.version>1.8</java.version>
+        <java.version>11</java.version>
         <encoding>UTF-8</encoding>
         <java.source.version>${java.version}</java.source.version>
         <java.target.version>${java.version}</java.target.version>
@@ -34,12 +34,14 @@
         <grpc.version>1.32.1</grpc.version>
         <proto.version>3.12.0</proto.version>
         <grpc-spring-boot-starter.version>4.0.0</grpc-spring-boot-starter.version>
+        <guice.version>5.0.1</guice.version>
     </properties>
     <modules>
         <module>grpc-api</module>
         <module>grpc-service</module>
         <module>grpc-client</module>
         <module>spring-jpa</module>
+        <module>google-guice</module>
     </modules>
 
     <dependencyManagement>
@@ -59,6 +61,15 @@
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
             <version>${hutool.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 

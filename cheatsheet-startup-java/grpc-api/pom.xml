@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <groupId>com.example</groupId>
-        <artifactId>examples-startup-java-pom</artifactId>
+        <artifactId>cheatsheet-startup-java-pom</artifactId>
         <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -81,18 +81,18 @@
                             <goal>compile</goal>
                         </goals>
                     </execution>
-                    <execution>
-                        <id>gen-doc</id>
-                        <phase>generate-sources</phase>
-                        <goals>
-                            <goal>compile-custom</goal>
-                        </goals>
-                        <configuration>
-                            <pluginId>gen-doc</pluginId>
-                            <pluginExecutable>${basedir}/plugins/protoc-gen-doc.${os.detected.name}</pluginExecutable>
-                            <pluginParameter>markdown,api-docs_v${revision}.md</pluginParameter>
-                        </configuration>
-                    </execution>
+<!--                    <execution>-->
+<!--                        <id>gen-doc</id>-->
+<!--                        <phase>generate-sources</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>compile-custom</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <pluginId>gen-doc</pluginId>-->
+<!--                            <pluginExecutable>${basedir}/plugins/protoc-gen-doc.${os.detected.name}</pluginExecutable>-->
+<!--                            <pluginParameter>markdown,api-docs_v${revision}.md</pluginParameter>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
                     <!-- 会在目录grpc-java下面产生对应的grpc结尾的类，stub类 -->
                     <execution>
                         <id>grpc-java</id>
